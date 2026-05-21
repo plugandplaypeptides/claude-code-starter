@@ -1,3 +1,4 @@
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 $ErrorActionPreference = "Stop"
 
 # $HOME can be unset in some non-interactive PS sessions; USERPROFILE is the Windows fallback.
@@ -32,7 +33,7 @@ foreach ($f in $files) {
         if ($f.Protect) {
             # CLAUDE.md is user-owned config; never clobber. Side-load as .starter so they can diff.
             $side = "$dest.starter"
-            Set-Content -Path $side -Value $new_content -NoNewline
+            Set-Content -Path $side -Value $new_content -NoNewline -Encoding UTF8
             Write-Host "  ! $dest exists with different content. Wrote new copy to $side instead."
             $placed += $side
             continue
@@ -40,7 +41,7 @@ foreach ($f in $files) {
         Write-Host "  ! Overwriting existing $dest"
     }
 
-    Set-Content -Path $dest -Value $new_content -NoNewline
+    Set-Content -Path $dest -Value $new_content -NoNewline -Encoding UTF8
     Write-Host "  + $dest"
     $placed += $dest
 }

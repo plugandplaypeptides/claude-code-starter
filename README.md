@@ -49,14 +49,34 @@ That is it. You are ready to build.
 
 ## Build your first thing (10 minutes)
 
-In PowerShell, pick a folder for your projects:
+### 1. Make a folder for your project
+
+Every project lives in its own folder. You are about to make one called `my-first-site`.
+
+In PowerShell, paste these three lines, one at a time:
 
 ```
-cd $HOME\Documents
+cd ~
 mkdir my-first-site
 cd my-first-site
+```
+
+What just happened:
+- `cd ~` moved you to your user home folder (the same folder File Explorer shows when you click your name in the left sidebar).
+- `mkdir my-first-site` created a new folder there called `my-first-site`.
+- `cd my-first-site` moved you into it. Anything Claude builds next will live in this folder.
+
+You can open File Explorer any time and find this folder at `C:\Users\YOUR-USERNAME\my-first-site`.
+
+### 2. Start Claude
+
+```
 claude
 ```
+
+If you see "command not found," close PowerShell completely and open it again. The install needs a fresh window. Then come back to this folder with `cd ~\my-first-site` and try `claude` again.
+
+### 3. Ask Claude to build
 
 Once Claude is running, paste this:
 
