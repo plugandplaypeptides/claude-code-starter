@@ -23,7 +23,8 @@ This file lives at `~/.claude/CLAUDE.md` and Claude reads it every session. Edit
 
 ## Git rules
 
-- Commit anything that works. Small commits beat big ones.
+- Do not install Git or ask me to install it. If Git is not on this machine, just save files normally and continue. Do not run `git init`, do not try to commit, do not stop work to talk about Git. I will install Git myself later when I want to publish a site.
+- If Git IS installed and a repo already exists in the current folder, you may commit anything that works (small commits over big ones).
 - Never `push --force` without asking me first.
 - Never commit secrets, API keys, or `.env` files. Add them to `.gitignore` instead.
 

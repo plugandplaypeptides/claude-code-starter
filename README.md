@@ -133,8 +133,8 @@ Claude will walk you through installing Git, making a GitHub account if needed, 
 
 1. Ask Claude in plain English. No special syntax.
 2. Read the question before answering "yes" to anything destructive.
-3. After anything works, say "commit this." That saves your progress.
-4. One project per folder.
-5. The terminal is just a chat window. Type, press Enter, read the reply.
+3. One project per folder.
+4. The terminal is just a chat window. Type, press Enter, read the reply.
+5. If Claude offers to set up Git on day one, say "skip Git for now." Git is for Part 4 when you are ready to publish.
 
 Welcome to building.
