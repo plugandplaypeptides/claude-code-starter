@@ -125,6 +125,11 @@ Claude will walk you through installing Git, making a GitHub account if needed, 
 - **"command not found"**: close PowerShell and open it again. New installs need a fresh window.
 - **Claude looks stuck**: press Ctrl+C, then try again.
 - **You are not sure what to do**: just ask Claude in plain English. It will help.
+- **Your starter kit feels out of date**: run the update script. It pulls the latest config from GitHub and overwrites your local copy:
+  ```
+  irm https://raw.githubusercontent.com/plugandplaypeptides/claude-code-starter/main/update.ps1 | iex
+  ```
+  Then close Claude (type `/exit`) and start it again.
 - **Really stuck**: text the person who sent you this with a screenshot.
 
 ---
